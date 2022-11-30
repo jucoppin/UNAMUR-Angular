@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HelloWorldComponent } from './hello-world/hello-world.component';
 import { DemoBindingComponent } from './demo-binding/demo-binding.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DemoPipesComponent } from './demo-pipes/demo-pipes.component';
 import { ToTemperaturePipe } from './pipes/to-temperature.pipe';
 import { DemoDirectivesComponent } from './demo-directives/demo-directives.component';
@@ -43,11 +43,13 @@ import { ShoppingModule } from './shopping/shopping.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-		FormsModule,
+    FormsModule,
+    ReactiveFormsModule,
     ShoppingModule,
   ],
   providers: [],
-	exports: [],
+  exports: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}

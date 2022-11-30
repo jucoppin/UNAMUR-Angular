@@ -4,6 +4,7 @@ import { ShoppingListComponent } from './pages/shopping-list/shopping-list.compo
 import { ShoppingCreateItemComponent } from './pages/shopping-create-item/shopping-create-item.component';
 import { ShoppingItemDetailComponent } from './components/shopping-item-detail/shopping-item-detail.component';
 import { RouterLink } from '@angular/router';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -15,7 +16,9 @@ import { RouterLink } from '@angular/router';
   ],
   imports: [
     CommonModule,
-    RouterLink
+    FormsModule,
+    RouterLink,
+    ReactiveFormsModule
   ]
 })
 export class ShoppingModule { }
