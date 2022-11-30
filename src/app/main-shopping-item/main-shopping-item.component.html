@@ -1,0 +1,7 @@
+<div (click)="addToCart($event)">
+  <p>
+    {{shoppingItem.id}} / {{shoppingItem.label}} : USERID {{userID}}
+  </p>
+
+  <a href="https://google.be" class="btn btn-primary" (click)="deleteItem($event)">Supprimer {{shoppingItem.id}}</a>
+</div>

@@ -1,0 +1,34 @@
+<h3>Structural Directives</h3>
+
+<h4>NgIf</h4>
+
+<p *ngIf="isOpen; else elseBlock">Message Secret</p>
+
+<ng-template #elseBlock>
+	<p>Message pas secret</p>
+</ng-template>
+
+<button (click)="isOpen = !isOpen">Afficher</button>
+
+<h4>Ng Switch</h4>
+
+<input type="text" [(ngModel)]="choice">
+
+<ul [ngSwitch]="choice">
+	<li *ngSwitchCase="1">Pomme</li>
+	<li *ngSwitchCase="2">Poire</li>
+	<li *ngSwitchCase="3">Fraise</li>
+	<li *ngSwitchDefault>Entrez 1, 2 ou 3</li>
+</ul>
+
+<h4>NgFor</h4>
+
+<input type="text" [(ngModel)]="fruitname">
+<button (click)="addFruit()">Add Fruit</button>
+
+<ul>
+	<li *ngFor="let fruit of fruits; index as i;odd as isOdd"
+		[ngClass]="{ 'first': isOdd }">
+		<span>{{ i }}</span> - {{ fruit }}
+	</li>
+</ul>

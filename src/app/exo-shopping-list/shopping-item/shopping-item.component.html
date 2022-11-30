@@ -1,0 +1,8 @@
+<li>
+	{{ item.name }} - qt:{{ item.quantity }} -
+	<span [ngClass]="{ 'promo' : item.isPromo}">{{ item.unitPrice | currency: 'EUR' }}</span> -
+	{{ item.quantity * item.unitPrice | currency: 'EUR' }}
+	<button (click)="update(item.id)">+</button>
+	<button (click)="update(item.id, false)">-</button>
+	<button (click)="delete(item.id)">DELETE</button>
+</li>

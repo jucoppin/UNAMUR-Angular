@@ -1,0 +1,25 @@
+.container {
+	width: 80vw;
+	margin: auto;
+}
+
+.title-course {
+	background-color: lightblue;
+	padding: 0.5%;
+	border: 1px solid darkslategray;
+	display: flex;
+	justify-content: space-between;
+	cursor: pointer;
+}
+
+.course{
+	padding: 0.5%;
+	border-left: 1px solid darkslategray;
+	border-right: 1px solid darkslategray;
+
+}
+
+.course:last-child{
+	border-bottom: 1px solid darkslategray;
+
+}

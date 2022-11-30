@@ -1,0 +1,28 @@
+<h1>Login Page</h1>
+<ng-template [ngIf]="!connectedUser">
+	<div>
+		<label for="login">Login</label>
+		<input id="login"
+			type="text"
+			[(ngModel)]="dataForm.login"
+		 />
+	</div>
+
+	<div>
+		<label for="pwd">Password</label>
+		<input id="pwd"
+			type="password"
+			[(ngModel)]="dataForm.pwd"
+		/>
+	</div>
+
+	<button (click)="login()">Log In</button>
+</ng-template>
+
+
+<section *ngIf="connectedUser">
+	<p>Bienvenue {{ connectedUser.firstname }} {{ connectedUser.lastname }}</p>
+	<button (click)="logout()">Log Out</button>
+</section>
+
+{{ dataForm | json }}

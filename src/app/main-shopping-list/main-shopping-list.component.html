@@ -1,0 +1,23 @@
+<ng-container *ngIf="items; else empty">
+  <ng-container *ngTemplateOutlet="notEmpty"></ng-container>
+</ng-container>
+
+ <ng-template #notEmpty>
+   List : {{items.length}}
+  <ng-container *ngFor="let item of items">
+    <app-main-shopping-item (onDeleteCompleted)="deleteShoppingItem($event)"
+                            [userID]="userID" [shoppingItem]="item">
+    </app-main-shopping-item>
+  </ng-container>
+
+<!--   <app-main-shopping-item *ngFor="let item of items"-->
+<!--                            >-->
+<!--   </app-main-shopping-item>-->
+ </ng-template>
+
+ <ng-template #empty>
+  Ici template empty
+ </ng-template>
+
+
+<button (click)="detectChanges()">Detect changes</button>

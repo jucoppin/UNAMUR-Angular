@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  fend:
+    build:
+      context: .docker/local
+      dockerfile: Dockerfile
+    ports:
+      - '45000:4200'
+    working_dir: /fend
+    volumes:
+      - .:/fend

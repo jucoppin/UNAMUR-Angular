@@ -1,0 +1,6 @@
+<h2>Spoiler Alert</h2>
+
+<button (click)="displaySecret()">{{ messageButton }}</button>
+<span *ngIf="!show">Rien à voir</span>
+
+<p *ngIf="show">Message Secret</p>

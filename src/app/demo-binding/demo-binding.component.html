@@ -1,0 +1,5 @@
+<p>{{ name }}</p>
+
+<input type="text" [(ngModel)]="name" [placeholder]="isDisabled ? 'hello': 'World'" [readOnly]="!isDisabled">
+
+<button (click)="handleClick()">{{!isDisabled ? 'Activate input': 'Desactiver input'}}</button>
