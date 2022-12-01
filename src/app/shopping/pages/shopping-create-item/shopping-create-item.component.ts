@@ -34,8 +34,10 @@ export class ShoppingCreateItemComponent implements OnInit, OnDestroy {
       quantity: [0],
       description: [null, [Validators.maxLength(10)]],
       promo: [true],
-      promoPrice: [null],
+      promoPrice: [{ value: null, disabled: true }],
     });
+
+    this.form.get('promo')?.disable()
 
     this.form.get('promo')?.valueChanges!.pipe(takeUntil(this.destroyed$)).subscribe(value => {
       this.isPromo = value;

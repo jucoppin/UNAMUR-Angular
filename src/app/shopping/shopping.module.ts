@@ -5,6 +5,7 @@ import { ShoppingCreateItemComponent } from './pages/shopping-create-item/shoppi
 import { ShoppingItemDetailComponent } from './components/shopping-item-detail/shopping-item-detail.component';
 import { RouterLink } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ShoppingItemComponent } from './pages/shopping-item/shopping-item.component';
 
 
 
@@ -12,7 +13,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
   declarations: [
     ShoppingListComponent,
     ShoppingCreateItemComponent,
-    ShoppingItemDetailComponent
+    ShoppingItemDetailComponent,
+    ShoppingItemComponent
   ],
   imports: [
     CommonModule,

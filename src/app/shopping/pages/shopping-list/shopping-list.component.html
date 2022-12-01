@@ -1,3 +1,5 @@
 <p>shopping-list works!</p>
 
 <button class="btn btn-primary" (click)="goToCreate()">Create item</button>
+<button class="btn btn-primary" [routerLink]="['/details', 1]">Go to success</button>
+<button class="btn btn-primary" [routerLink]="['/details', 'e']">Go to error</button>

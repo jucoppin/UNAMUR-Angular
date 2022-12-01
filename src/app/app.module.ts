@@ -20,6 +20,8 @@ import { ShoppingItemComponent } from './exo-shopping-list/shopping-item/shoppin
 import { MainShoppingListComponent } from './main-shopping-list/main-shopping-list.component';
 import { MainShoppingItemComponent } from './main-shopping-item/main-shopping-item.component';
 import { ShoppingModule } from './shopping/shopping.module';
+import { HttpClientModule } from '@angular/common/http';
+import { ProjectModule } from './project/project.module';
 
 @NgModule({
   declarations: [
@@ -45,7 +47,9 @@ import { ShoppingModule } from './shopping/shopping.module';
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
+    HttpClientModule,
     ShoppingModule,
+    ProjectModule,
   ],
   providers: [],
   exports: [],
