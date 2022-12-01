@@ -1,6 +1,6 @@
 FROM node:16
 
-RUN npm i -g @angular/cli@13
+RUN npm i -g @angular/cli@14
 
 WORKDIR /fend
 RUN cd /fend

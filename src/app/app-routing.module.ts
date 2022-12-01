@@ -4,6 +4,8 @@ import { ShoppingListComponent } from './shopping/pages/shopping-list/shopping-l
 import { ShoppingCreateItemComponent } from './shopping/pages/shopping-create-item/shopping-create-item.component';
 import { ShoppingItemDetailComponent } from './shopping/components/shopping-item-detail/shopping-item-detail.component';
 import { ProjectListComponent } from './project/pages/project-list/project-list.component';
+import { ProjectCreateComponent } from './project/pages/project-create/project-create.component';
+import { ProjectDetailComponent } from './project/pages/project-detail/project-detail.component';
 
 const routes: Routes = [
   {
@@ -24,6 +26,14 @@ const routes: Routes = [
       {
         path: '',
         component: ProjectListComponent,
+      },
+      {
+        path: ':id',
+        component: ProjectDetailComponent,
+      },
+      {
+        path: 'create',
+        component: ProjectCreateComponent,
       },
       {
         path: 'sub',

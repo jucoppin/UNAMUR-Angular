@@ -20,6 +20,6 @@ export class ProjectService {
   }
 
   create(body: any): Observable<{ id: number }> {
-    return this.httpClient.post('http://localhost:3001/projects', body);
+    return this.httpClient.post<{id: number}>('http://localhost:3001/projects', body);
   }
 }

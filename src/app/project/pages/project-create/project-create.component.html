@@ -1,0 +1,11 @@
+<form [formGroup]="formGroup" (ngSubmit)="submit()">
+  <div>
+    Nom : <input type="text" formControlName="name">
+  </div>
+  <div>
+    Description : <textarea formControlName="description"></textarea>
+  </div>
+  <div>
+    Actif : <input type="checkbox" formControlName="isActive">
+  </div>
+</form>
