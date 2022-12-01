@@ -24,8 +24,16 @@ export class ProjectListComponent implements OnInit {
       console.table(x);
       setTimeout(() => {
         this.projects = x;
+
+        // this.projects.sort((a, b) => {
+        //   return a.id < b.id ? -1 : 1;
+        // });
+
+        // Vous avez le full access
+        // this.projects.splice(0, 20);
+
         this.loading = false;
-      }, 2500);
+      }, 0);
       // this.projects = x;
     });
     // this.projectService.getAll().subscribe({
@@ -33,5 +41,11 @@ export class ProjectListComponent implements OnInit {
     //   error: e => null,
     //   complete: () => null,
     // });
+  }
+
+  sort(column: keyof ProjectList) {
+    this.projects.sort((a, b) => {
+      return a[column] < b[column] ? -1 : 1;
+    });
   }
 }

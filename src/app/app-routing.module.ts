@@ -40,6 +40,12 @@ const routes: Routes = [
         children: []
       }
     ]
+  },
+  {
+    canLoad: [() => true],
+    canActivate: [() => true],
+    path: 'users',
+    loadChildren: () => import('./user/user.module').then(x => x.UserModule),
   }
 ];
 

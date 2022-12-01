@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { map, Observable } from 'rxjs';
 import { ProjectList } from '../models/project-list.model';
 
 @Injectable({
@@ -15,7 +15,16 @@ export class ProjectService {
   }
 
   getAll(): Observable<ProjectList[]> {
-    return this.httpClient.get<ProjectList[]>('http://localhost:3001/projects');
+    //  138.48.248.123
+    return this.httpClient.get<ProjectList[]>('http://localhost:3001/projects').pipe(
+      map(x => {
+        x.sort((a, b) => {
+          return a.isActive ? -1 : 1;
+        });
+
+        return x;
+      })
+    );
   }
 
   getOne(id: number): Observable<ProjectList> {
