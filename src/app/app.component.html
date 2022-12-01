@@ -2,6 +2,12 @@
 
 ul>li[routerLink]*6
 
+<ul>
+  <li routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:true}" [routerLink]="['/projects']">Project</li>
+  <li routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:true}" [routerLink]="['/projects/create']">Create project</li>
+  <li routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:true}" [routerLink]="['/']">Shopping</li>
+</ul>
+
 <!-- <app-hello-world></app-hello-world>
 
 <app-demo-binding></app-demo-binding> -->
@@ -22,4 +28,6 @@ ul>li[routerLink]*6
 
 <!--<app-main-shopping-list></app-main-shopping-list>-->
 
-<router-outlet></router-outlet>
+<div class="container" style="width: 720px; margin: auto; border: 1px solid black; padding: 10px;">
+  <router-outlet></router-outlet>
+</div>
