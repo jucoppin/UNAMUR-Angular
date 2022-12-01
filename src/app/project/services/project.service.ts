@@ -21,6 +21,7 @@ export class ProjectService {
         x.sort((a, b) => {
           return a.isActive ? -1 : 1;
         });
+        // debugger
 
         return x;
       })

@@ -1,6 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ProjectCreateComponent } from './project-create.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 describe('ProjectCreateComponent', () => {
   let component: ProjectCreateComponent;
@@ -8,7 +10,8 @@ describe('ProjectCreateComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ProjectCreateComponent ]
+      declarations: [ ProjectCreateComponent ],
+      imports: [HttpClientModule, FormsModule, ReactiveFormsModule]
     })
     .compileComponents();
 

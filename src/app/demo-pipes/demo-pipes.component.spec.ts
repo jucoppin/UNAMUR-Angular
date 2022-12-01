@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { DemoPipesComponent } from './demo-pipes.component';
+import { ToTemperaturePipe } from '../pipes/to-temperature.pipe';
 
 describe('DemoPipesComponent', () => {
   let component: DemoPipesComponent;
@@ -8,9 +9,10 @@ describe('DemoPipesComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ DemoPipesComponent ]
+      declarations: [DemoPipesComponent, ToTemperaturePipe],
+      providers: [ToTemperaturePipe]
     })
-    .compileComponents();
+      .compileComponents();
 
     fixture = TestBed.createComponent(DemoPipesComponent);
     component = fixture.componentInstance;
