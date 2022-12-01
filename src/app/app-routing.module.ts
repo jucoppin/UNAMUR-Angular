@@ -28,18 +28,16 @@ const routes: Routes = [
         component: ProjectListComponent,
       },
       {
-        path: ':id',
-        component: ProjectDetailComponent,
-      },
-      {
         path: 'create',
         component: ProjectCreateComponent,
       },
       {
+        path: ':id',
+        component: ProjectDetailComponent,
+      },
+      {
         path: 'sub',
-        children: [
-
-        ]
+        children: []
       }
     ]
   }
@@ -49,4 +47,5 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {
+}

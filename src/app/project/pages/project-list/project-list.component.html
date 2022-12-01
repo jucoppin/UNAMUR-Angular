@@ -12,7 +12,9 @@
   <ng-container *ngIf="projects">
     <tr *ngFor="let project of projects">
       <td>{{project.id}}</td>
-      <td>{{project.name}}</td>
+      <td>
+        <span class="link" [routerLink]="['/projects', project.id]">{{project.name}}</span>
+      </td>
       <td>{{project.description}}</td>
       <td><input type="checkbox" disabled [checked]="project.isActive"></td>
     </tr>

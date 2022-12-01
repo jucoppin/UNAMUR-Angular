@@ -15,8 +15,11 @@ export class ProjectService {
   }
 
   getAll(): Observable<ProjectList[]> {
-    console.log('CALLx²');
     return this.httpClient.get<ProjectList[]>('http://localhost:3001/projects');
+  }
+
+  getOne(id: number): Observable<ProjectList> {
+    return this.httpClient.get<ProjectList>(`http://localhost:3001/projects/${id}`);
   }
 
   create(body: any): Observable<{ id: number }> {

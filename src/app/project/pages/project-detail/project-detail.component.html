@@ -1,1 +1,9 @@
-<p>project-detail works!</p>
+<ng-container *ngIf="project; else loading">
+  <p>{{project.name}}</p>
+  <p>{{project.description}}</p>
+  <p>{{project.isActive ? 'Actif' : 'Non-actif'}}</p>
+</ng-container>
+
+<ng-template #loading>
+  <div class="loader"></div>
+</ng-template>
